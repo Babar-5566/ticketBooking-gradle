@@ -1,102 +1,73 @@
 # 🎫 Ticket Booking System
 
-A simple **Java-based console ticket booking system** built using **Gradle**.
+A **Java-based console ticket booking system** built with **Gradle**.
 
-The application allows users to:
+The application allows users to create accounts, authenticate, search trains, view seat availability, book seats, manage bookings, and maintain their login session between application runs.
 
-* Create an account
-* Login and stay logged in between application runs
-* Search available trains
-* Select a train
-* View available seats
-* Book a seat
-* View their bookings
-* Cancel bookings
-* Logout
-* Exit the application
+The project uses **local JSON files as a lightweight database**, so no external database server such as MySQL or PostgreSQL is required.
 
-The project uses local JSON files as a simple database, making it easy to run without installing MySQL, PostgreSQL, or any other database server.
+---
+
+## ✨ Features
+
+* 👤 User registration and login
+* 🔐 Password hashing using BCrypt
+* 💾 Persistent login sessions
+* 🚆 Train search with station timings
+* 💺 Seat availability and seat booking
+* 🎫 Ticket generation and booking history
+* ❌ Booking cancellation
+* 🚪 Login/logout session management
+* 📄 JSON-based local data persistence
+* 🧪 Unit testing with JUnit
+* ⚙️ Gradle build and dependency management
+* 🪟 One-click Windows setup using `setup.bat`
 
 ---
 
 ## 🛠️ Technology Stack
 
-* **Java 22**
-* **Gradle 9.8**
-* **Jackson** — JSON data handling
-* **jBCrypt** — password hashing
-* **Lombok**
-* **JUnit** — testing
+| Technology     | Purpose                                |
+| -------------- | -------------------------------------- |
+| **Java 22**    | Application development                |
+| **Gradle 9.8** | Build and dependency management        |
+| **Jackson**    | JSON serialization and deserialization |
+| **jBCrypt**    | Password hashing                       |
+| **Lombok**     | Boilerplate code reduction             |
+| **JUnit**      | Unit testing                           |
+| **JSON Files** | Local data persistence                 |
 
 ---
 
-## 📁 Project Structure
+# 🚀 Quick Start
 
-```text
-ticketBooking-gradle/
-│
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   └── java/
-│   │   │       └── ticket/
-│   │   │           └── booking/
-│   │   │               ├── App.java
-│   │   │               ├── Action.java
-│   │   │               ├── entities/
-│   │   │               ├── service/
-│   │   │               ├── util/
-│   │   │               └── localDB/
-│   │   │                   ├── users.json
-│   │   │                   ├── trains.json
-│   │   │                   └── session.json
-│   │   └── test/
-│   │
-│   └── build.gradle.kts
-│
-├── gradle/
-├── gradlew
-├── gradlew.bat
-├── settings.gradle.kts
-├── setup.bat
-└── README.md
-```
+> **Windows users can run the project with almost no technical setup.**
 
----
-
-# 🚀 Easy Setup
-
-## Windows Users
-
-### Step 1 — Install Java 22
+### 1. Install Java 22
 
 This project requires **Java 22**.
 
-After installing Java, open Command Prompt or PowerShell and run:
+After installing Java, verify the installation:
 
 ```text
 java -version
 ```
 
-You should see Java version 22.
+You should see Java version `22`.
 
----
+### 2. Download the Project
 
-### Step 2 — Download the project
-
-Either clone the repository using Git:
+Clone the repository:
 
 ```bash
 git clone https://github.com/Babar-5566/ticketBooking-gradle.git
 ```
 
-or download the project as a ZIP from GitHub and extract it.
+Or download the repository as a ZIP from GitHub and extract it.
 
----
+### 3. Start the Application
 
-### Step 3 — Run the setup
-
-Open the project folder and double-click:
+Open the project folder and **double-click**:
 
 ```text
 setup.bat
@@ -104,57 +75,25 @@ setup.bat
 
 The setup script will:
 
-1. Check whether Java is installed.
+1. Check the Java installation.
 2. Check the Java version.
-3. Build the project using the included Gradle Wrapper.
-4. Start the Ticket Booking System.
+3. Build the project using the Gradle Wrapper.
+4. Download required Gradle dependencies.
+5. Start the application.
 
-You **do not need to install Gradle separately**.
+### Do I need to install Gradle?
 
----
+**No.**
 
-# ▶️ Running Manually
-
-If you prefer using the terminal:
-
-### Build the project
-
-Windows:
-
-```bash
-gradlew.bat build
-```
-
-### Start the application
-
-Windows:
-
-```bash
-gradlew.bat run --console=plain
-```
+The project includes the **Gradle Wrapper**, so Gradle does not need to be installed separately.
 
 ---
 
-# 👤 Demo Accounts
+# ▶️ Running the Application
 
-The project includes dummy users for testing.
+After starting the application, you will see the console menu.
 
-| Username        | Password |
-| --------------- | -------- |
-| Lovepreet Singh | 12345    |
-| rahul           | hhbb11   |
-
-These are **demo credentials only**.
-
-You can also create a new account using the **Sign Up** option.
-
----
-
-# 🎫 How to Use
-
-## 1. Guest Menu
-
-When you start the application without an active session:
+### Guest Menu
 
 ```text
 1. Sign up
@@ -163,7 +102,47 @@ When you start the application without an active session:
 4. Exit the App
 ```
 
-Guests can search trains but must login before booking.
+Guests can search trains, but authentication is required before booking a seat.
+
+### Logged-in Menu
+
+```text
+1. Fetch My Bookings
+2. Search Trains
+3. Book a Seat
+4. Cancel My Booking
+5. Logout
+6. Exit the App
+```
+
+---
+
+# 👤 Demo Accounts
+
+The repository contains dummy accounts for testing.
+
+| Username          | Password |
+| ----------------- | -------- |
+| `Lovepreet Singh` | `12345`  |
+| `rahul`           | `hhbb11` |
+
+These credentials are provided **for demonstration purposes only**.
+
+You can also create a new account using the **Sign Up** option.
+
+---
+
+# 🎫 How the Application Works
+
+## 1. Create an Account
+
+From the guest menu, select:
+
+```text
+1. Sign up
+```
+
+Provide the required account details to create a new user.
 
 ---
 
@@ -177,11 +156,11 @@ Select:
 
 Enter your username and password.
 
-After successful login, the application remembers your session.
+After successful authentication, the application stores the user's session so it can be restored when the application is started again.
 
 ---
 
-## 3. Search Trains
+## 3. Search for Trains
 
 Select:
 
@@ -189,14 +168,14 @@ Select:
 Search Trains
 ```
 
-Enter:
+Enter the:
 
 ```text
 Source
 Destination
 ```
 
-The application displays matching trains and their station timings.
+The application displays matching trains along with their station timings.
 
 Logged-in users can select a train for booking.
 
@@ -204,15 +183,15 @@ Logged-in users can select a train for booking.
 
 ## 4. Book a Seat
 
-After selecting a train:
+After selecting a train, choose:
 
 ```text
 Book a Seat
 ```
 
-The application displays the seat layout.
+The application displays the available seat layout.
 
-For example:
+Example:
 
 ```text
 0 0 0 0 0 0
@@ -228,9 +207,9 @@ Where:
 1 = Booked
 ```
 
-Select the row and column of the desired seat and enter the travel date.
+Select the required row and column and provide the travel date.
 
-A ticket is then created and stored in the user's bookings.
+A ticket is created and added to the user's bookings.
 
 ---
 
@@ -242,7 +221,7 @@ Select:
 Fetch My Bookings
 ```
 
-The application displays ticket information including:
+The application displays information such as:
 
 * Ticket ID
 * User ID
@@ -265,7 +244,7 @@ Select:
 Cancel My Booking
 ```
 
-Enter the Ticket ID of the booking you want to cancel.
+Enter the **Ticket ID** of the booking you want to cancel.
 
 ---
 
@@ -277,15 +256,13 @@ Select:
 Logout
 ```
 
-The current session is removed.
-
-The next time the application starts, it will show the guest menu.
+The current session is cleared and the application returns to the guest state.
 
 ---
 
 # 💾 Local Database
 
-This project intentionally uses JSON files instead of an external database.
+Instead of using an external database server, the application stores its data in JSON files.
 
 The files are located at:
 
@@ -295,130 +272,15 @@ app/src/main/java/ticket/booking/localDB/
 
 ### `users.json`
 
-Stores registered users and their bookings.
+Stores registered users and their booking information.
 
 ### `trains.json`
 
-Stores train information and seat availability.
+Stores train information, station timings, and seat availability.
 
 ### `session.json`
 
-Stores the currently logged-in user's ID so the application can restore the session when restarted.
-
----
-
-# 🔐 Security Note
-
-This is an educational console project.
-
-The project uses **jBCrypt for password hashing**, but the current dummy database also contains demonstration password fields for convenience.
-
-Do not use the included authentication/database design for a production application without additional security improvements.
-
-Never commit real passwords, API keys, database credentials, or other secrets to GitHub.
-
----
-
-# 🧪 Testing
-
-Run the test suite using:
-
-```bash
-gradlew.bat test
-```
-
-To build the complete project:
-
-```bash
-gradlew.bat build
-```
-
----
-
-# 📌 Project Purpose
-
-This project was created to practice:
-
-* Java OOP
-* Collections
-* Exception handling
-* File handling
-* JSON serialization/deserialization
-* Password hashing
-* Service-layer design
-* Session management
-* Gradle
-* Unit testing
-* Git/GitHub
-
-It is designed as a learning project that can be progressively improved toward a more production-oriented architecture.
-
----
-
-# 🚀 Quick Start — No Technical Knowledge Required
-
-**Just downloaded this project and don't know what to do?**
-
-### 👉 Windows users: Start here
-
-1. Download or clone this repository.
-2. Open the project folder.
-3. **Double-click `setup.bat`**.
-4. Follow the instructions shown on the screen.
-
-That's it. 🎉
-
-`setup.bat` automatically:
-
-* Checks whether Java is installed.
-* Checks the Java version.
-* Downloads the required Gradle dependencies.
-* Builds the project.
-* Starts the Ticket Booking System.
-
-### ⚠️ Before running `setup.bat`
-
-You need **Java 22** installed on your computer.
-
-You can check this by opening Command Prompt and running:
-
-```text
-java -version
-```
-
-If Java is not installed, install Java 22 first and then double-click `setup.bat`.
-
-> **You do NOT need to install Gradle separately.**
-> The project already includes the Gradle Wrapper.
-
----
-
-# 🎯 What Does This Application Do?
-
-The Ticket Booking System allows users to:
-
-* Create an account
-* Login
-* Search trains
-* View available seats
-* Book a seat
-* View their bookings
-* Cancel bookings
-* Logout
-* Exit the application
-
-The project uses local JSON files as a simple database, so no MySQL, PostgreSQL, or other database server is required.
-
----
-
-# 🛠️ Technology Stack
-
-* **Java 22**
-* **Gradle 9.8**
-* **Jackson** — JSON data handling
-* **jBCrypt** — password hashing
-* **Lombok**
-* **JUnit** — testing
+Stores the currently logged-in user's ID, allowing the application to restore the session when restarted.
 
 ---
 
@@ -442,6 +304,7 @@ ticketBooking-gradle/
 │   │   │                   ├── users.json
 │   │   │                   ├── trains.json
 │   │   │                   └── session.json
+│   │   │
 │   │   └── test/
 │   │
 │   └── build.gradle.kts
@@ -450,69 +313,40 @@ ticketBooking-gradle/
 ├── gradlew
 ├── gradlew.bat
 ├── settings.gradle.kts
-├── setup.bat          ← ⭐ DOUBLE-CLICK THIS
+├── setup.bat
 └── README.md
 ```
 
----
+### Main Components
 
-# 👤 Demo Accounts
-
-The project includes dummy users for testing.
-
-| Username        | Password |
-| --------------- | -------- |
-| Babar           | babar@123|
-
-You can also create a new account using **Sign Up**.
+* **`App.java`** — Console interface and application flow
+* **`Action.java`** — Represents application actions/menu operations
+* **`entities/`** — Core data models such as users, trains, and tickets
+* **`service/`** — Business logic and application services
+* **`util/`** — Utility/helper classes
+* **`localDB/`** — Local JSON data storage
 
 ---
 
-# 🎫 How to Use the Application
+# 🧪 Testing
 
-After running `setup.bat`, the application will open in the terminal.
+Run the test suite with:
 
-## Guest Menu
-
-```text
-1. Sign up
-2. Login
-3. Search Trains
-4. Exit the App
+```bash
+gradlew.bat test
 ```
 
-Guests can search trains but must login before booking.
+Run a complete build:
 
-## Logged-in Menu
-
-```text
-1. Fetch My Bookings
-2. Search Trains
-3. Book a Seat
-4. Cancel My Booking
-5. Logout
-6. Exit the App
+```bash
+gradlew.bat build
 ```
 
 ---
 
-# 💾 Local Database
+# 👨‍💻 Developer Setup
 
-The application uses JSON files instead of an external database:
-
-```text
-app/src/main/java/ticket/booking/localDB/
-```
-
-* `users.json` — users and their bookings
-* `trains.json` — trains and seat availability
-* `session.json` — current login session
-
----
-
-# 🧪 For Developers
-
-If you are a developer and want to run the project manually:
+Developers can run the application directly through the Gradle Wrapper.
 
 ### Build
 
@@ -526,21 +360,77 @@ gradlew.bat build
 gradlew.bat run --console=plain
 ```
 
-### Run tests
+### Run Tests
 
 ```bash
 gradlew.bat test
 ```
 
+### Clean Build
+
+```bash
+gradlew.bat clean build
+```
+
+> The Gradle Wrapper is included in the repository, so a separate Gradle installation is not required.
+
 ---
 
-# 🔐 Security Note
+# 🔐 Security & Limitations
 
-This is an educational console project.
+This is an **educational console application** and is not intended for production deployment in its current form.
 
-The included JSON database contains dummy credentials for demonstration purposes. Do not put real passwords, API keys, database credentials, or other secrets into the repository.
+The project uses **jBCrypt for password hashing**, but the local demonstration database contains dummy credential fields for convenience.
 
-The authentication system should be further hardened before being used in a production environment.
+For a production system, additional security measures would be required, including:
+
+* Secure secret and credential management
+* Proper database-backed persistence
+* Stronger authentication and authorization controls
+* Input validation and sanitization
+* Secure session management
+* Proper logging and monitoring
+* Protection against concurrent booking conflicts
+* Removal of demonstration credentials from the database
+
+**Never commit real passwords, API keys, database credentials, or other secrets to GitHub.**
+
+---
+
+# 🎯 Project Purpose
+
+This project was developed to practice and demonstrate:
+
+* Java OOP
+* Collections and data structures
+* Exception handling
+* File handling
+* JSON serialization/deserialization
+* Password hashing
+* Service-layer design
+* Session management
+* Gradle
+* Unit testing
+* Git and GitHub
+
+The architecture is intentionally simple and can be extended toward a more production-oriented application.
+
+---
+
+# 🔮 Future Improvements
+
+Possible future enhancements include:
+
+* Migration from JSON files to a relational database
+* REST API using Spring Boot
+* Web or mobile frontend
+* Role-based access control
+* Improved authentication and session management
+* Transaction-safe seat booking
+* Search and filtering improvements
+* Comprehensive integration testing
+* Docker-based deployment
+* CI/CD pipeline
 
 ---
 
@@ -548,4 +438,6 @@ The authentication system should be further hardened before being used in a prod
 
 **Sk Babar Ali**
 
-Computer Science Engineering Student
+Java / Computer Science Student
+
+[GitHub](https://github.com/Babar-5566)
