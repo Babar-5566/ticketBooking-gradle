@@ -355,12 +355,6 @@ It is designed as a learning project that can be progressively improved toward a
 
 ---
 
-# 🎫 Ticket Booking System
-
-A simple **Java-based console ticket booking system** built using **Gradle**.
-
----
-
 # 🚀 Quick Start — No Technical Knowledge Required
 
 **Just downloaded this project and don't know what to do?**
