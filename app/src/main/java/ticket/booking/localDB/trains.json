@@ -1,0 +1,110 @@
+[
+  {
+    "train_id": "T001",
+    "train_no": "12345",
+    "seats": [
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0]
+    ],
+    "station_times": {
+      "bangalore": "06:30:00",
+      "jaipur": "14:30:00",
+      "delhi": "20:30:00"
+    },
+    "stations": [
+      "bangalore",
+      "jaipur",
+      "delhi"
+    ]
+  },
+  {
+    "train_id": "T002",
+    "train_no": "12876",
+    "seats": [
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0]
+    ],
+    "station_times": {
+      "mumbai": "07:00:00",
+      "ahmedabad": "12:30:00",
+      "jaipur": "19:00:00",
+      "delhi": "23:30:00"
+    },
+    "stations": [
+      "mumbai",
+      "ahmedabad",
+      "jaipur",
+      "delhi"
+    ]
+  },
+  {
+    "train_id": "T003",
+    "train_no": "15678",
+    "seats": [
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0]
+    ],
+    "station_times": {
+      "kolkata": "05:45:00",
+      "patna": "11:30:00",
+      "varanasi": "16:00:00",
+      "delhi": "22:30:00"
+    },
+    "stations": [
+      "kolkata",
+      "patna",
+      "varanasi",
+      "delhi"
+    ]
+  },
+  {
+    "train_id": "T004",
+    "train_no": "16789",
+    "seats": [
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0]
+    ],
+    "station_times": {
+      "chennai": "06:00:00",
+      "bangalore": "11:00:00",
+      "hyderabad": "17:30:00",
+      "mumbai": "23:00:00"
+    },
+    "stations": [
+      "chennai",
+      "bangalore",
+      "hyderabad",
+      "mumbai"
+    ]
+  },
+  {
+    "train_id": "T005",
+    "train_no": "14567",
+    "seats": [
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0]
+    ],
+    "station_times": {
+      "delhi": "07:15:00",
+      "agra": "10:00:00",
+      "lucknow": "15:30:00",
+      "varanasi": "20:00:00"
+    },
+    "stations": [
+      "delhi",
+      "agra",
+      "lucknow",
+      "varanasi"
+    ]
+  }
+]
